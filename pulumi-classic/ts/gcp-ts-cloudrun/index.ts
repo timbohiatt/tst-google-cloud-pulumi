@@ -6,7 +6,7 @@ import * as pulumi from "@pulumi/pulumi"
 
 
 // Location to deploy Cloud Run services
-const location = gcp.config.region || 'us-central1'
+const location = gcp.config.region || "us-central1"
 
 // ----------------------------------------------- //
 // Deploy a pre-existing Hello Cloud Run container //
