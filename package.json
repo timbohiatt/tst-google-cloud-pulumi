@@ -16,10 +16,10 @@
         "prettier": "^2.7.1"
     },
     "lint-staged": {
-        "*.{js,ts}": [
+        "*.{js,ts, py}": [
             "eslint --cache --fix"
         ],
-        "*.{js,ts,md,css}": [
+        "*.{js,ts,md,css, py}": [
             "prettier --write"
         ]
     },
