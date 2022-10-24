@@ -16,10 +16,10 @@
         "prettier": "^2.7.1"
     },
     "lint-staged": {
-        "**/pulumi-classic/go/*/*.go": [
+        "**/pulumi-classic/go/**/*.go": [
             "gofmt -s -w pulumi-classic/go/"
         ],
-        "**/pulumi-native/go/*/*.go": [
+        "**/pulumi-native/go/**/*.go": [
             "gofmt -s -w pulumi-native/go/"
         ],
         "*.{js,ts}": [
