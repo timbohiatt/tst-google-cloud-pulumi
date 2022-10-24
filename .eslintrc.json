@@ -4,7 +4,7 @@
         "node": true
     },
     "extends": [
-        "standard",
+        "standard-with-typescript",
         "prettier"
     ],
     "overrides": [],
