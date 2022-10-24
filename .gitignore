@@ -1,3 +1,9 @@
+# Node / JS / TS
 node_modules
+
+# IDE
 .vscode
 .DS_Store
+
+# ESLint
+.eslintcache
