@@ -16,8 +16,11 @@
         "prettier": "^2.7.1"
     },
     "lint-staged": {
-        "**/PulumiClassic/go/*.{go}": [
-            "go fmt"
+        "**/pulumi-classic/go/*/*.go": [
+            "gofmt -s -w ."
+        ],
+        "**/pulumi-native/go/*/*.go": [
+            "gofmt -s -w ."
         ],
         "*.{js,ts}": [
             "eslint --cache --fix"
