@@ -23,9 +23,11 @@
             "gofmt -s -w pulumi-native/go/"
         ],
         "**/pulumi-classic/ts/**/*.{js,ts}": [
+            "tsc --noEmit",
             "eslint --cache --fix"
         ],
         "**/pulumi-native/ts/**/*.{js,ts}": [
+            "tsc --noEmit",
             "eslint --cache --fix"
         ],
         "**/pulumi-classic/yaml/**/*.{yaml,yml}": [
