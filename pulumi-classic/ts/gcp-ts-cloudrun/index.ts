@@ -4,6 +4,7 @@ import * as docker from "@pulumi/docker";
 import * as gcp from '@pulumi/gcp'
 import * as pulumi from "@pulumi/pulumi"
 
+
 // Location to deploy Cloud Run services
 const location = gcp.config.region || 'us-central1'
 
