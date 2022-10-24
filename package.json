@@ -9,13 +9,18 @@
         "@typescript-eslint/eslint-plugin": "^5.40.1",
         "@typescript-eslint/parser": "^5.40.1",
         "eslint": "^8.26.0",
+        "eslint-config-prettier": "^8.5.0",
         "husky": "^8.0.1",
         "lint-staged": "^13.0.3",
         "prettier": "^2.7.1"
     },
     "lint-staged": {
-        "*.js": "eslint --cache --fix",
-        "*.{js,css,md}": "prettier --write"
+        "*.{js,ts}": [
+            "eslint --cache --fix"
+        ],
+        "*.{js,ts,md,css}": [
+            "prettier --write"
+        ]
     },
     "scripts": {
         "prepare": "husky install"
