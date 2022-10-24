@@ -1,9 +1,8 @@
 // Copyright 2016-2020, Pulumi Corporation.  All rights reserved.
 
-import * as docker from "@pulumi/docker";
-import * as gcp from '@pulumi/gcp'
+import * as docker from "@pulumi/docker"
+import * as gcp from "@pulumi/gcp"
 import * as pulumi from "@pulumi/pulumi"
-
 
 // Location to deploy Cloud Run services
 const location = gcp.config.region || "us-central1"
@@ -18,18 +17,18 @@ const helloService = new gcp.cloudrun.Service("hello", {
       containers: [{ image: "gcr.io/cloudrun/hello" }],
     },
   },
-});
+})
 
 // Open the service to public unrestricted access
-const iamHello = new gcp.cloudrun.IamMember("hello-everyone", {
+new gcp.cloudrun.IamMember("hello-everyone", {
   service: helloService.name,
   location,
   role: "roles/run.invoker",
   member: "allUsers",
-});
+})
 
 // Export the URL
-export const helloUrl = helloService.statuses[0].url;
+export const helloUrl = helloService.statuses[0].url
 
 // -------------------------------------- //
 // Deploy a custom container to Cloud Run //
@@ -37,13 +36,13 @@ export const helloUrl = helloService.statuses[0].url;
 
 // Build a Docker image from our sample Ruby app and put it to Google Container Registry.
 // Note: Run `gcloud auth configure-docker` in your command line to configure auth to GCR.
-const imageName = "ruby-app";
+const imageName = "ruby-app"
 const myImage = new docker.Image(imageName, {
   imageName: pulumi.interpolate`gcr.io/${gcp.config.project}/${imageName}:v1.0.0`,
   build: {
     context: "./app",
   },
-});
+})
 
 // Deploy to Cloud Run. Some extra parameters like concurrency and memory are set for illustration purpose.
 const rubyService = new gcp.cloudrun.Service("ruby", {
@@ -63,15 +62,15 @@ const rubyService = new gcp.cloudrun.Service("ruby", {
       containerConcurrency: 50,
     },
   },
-});
+})
 
 // Open the service to public unrestricted access
-const iamRuby = new gcp.cloudrun.IamMember("ruby-everyone", {
+new gcp.cloudrun.IamMember("ruby-everyone", {
   service: rubyService.name,
   location,
   role: "roles/run.invoker",
   member: "allUsers",
-});
+})
 
 // Export the URL
-export const rubyUrl = rubyService.statuses[0].url;
+export const rubyUrl = rubyService.statuses[0].url
