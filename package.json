@@ -1,0 +1,20 @@
+{
+    "name": "gcpe",
+    "version": "0.0.1",
+    "private": false,
+    "repository": "git@github.com:google-cloud-pulumi/google-cloud-pulumi-examples",
+    "author": "Tim Hiatt <timhiatt@google.com>",
+    "license": "Apache-2.0",
+    "dependencies": {},
+    "devDependencies": {
+        "husky": "^8.0.1",
+        "lint-staged": "^13.0.3"
+    },
+    "scripts": {
+        "prepare": "husky install"
+    },
+    "lint-staged": {
+        "**/*.yaml": "yarn run prettier --write '**/*.yaml'",
+        "**/*.yml": "yarn run prettier --write '**/*.yml'"
+    }
+}
