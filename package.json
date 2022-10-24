@@ -22,6 +22,12 @@
         "**/pulumi-native/go/**/*.go": [
             "gofmt -s -w pulumi-native/go/"
         ],
+        "**/pulumi-classic/ts/**/*.{js,ts}": [
+            "eslint --cache --fix"
+        ],
+        "**/pulumi-native/ts/**/*.{js,ts}": [
+            "eslint --cache --fix"
+        ],
         "**/pulumi-classic/yaml/**/*.{yaml,yml}": [
             "prettier --write"
         ],
