@@ -20,13 +20,13 @@ runtime: yaml
 template:
   description: Pulumi YAML example using the Google Cloud classic API that Google Cloud APIs on a specific pre-existing Google Cloud Project
   config:
-    project_id:
+    projectId:
       type: String
       description: The globally unique identifier for your existing Google Cloud project
 
 # Example configuration settings
 configuration:
-  project_id:
+  projectId:
     type: String
 
 # Define resources
@@ -35,5 +35,5 @@ resources:
     type: gcp:projects:Service
     properties:
       disableDependentServices: true
-      project: ${project_id}
+      project: ${projectId}
       service: compute.googleapis.com
