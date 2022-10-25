@@ -18,16 +18,14 @@ runtime: yaml
 
 # Configure example
 template:
-  description: Pulumi YAML example using the Google Cloud classic API that Google Cloud APIs on a specific pre-existing Google Cloud Project.
+  description: Pulumi YAML example using the Google Cloud classic API that Google Cloud APIs on a specific pre-existing Google Cloud Project
   config:
     project_id:
       type: String
-      description: The globally unique identifier for your existing Google Cloud project.
+      description: The globally unique identifier for your existing Google Cloud project
 
 # Example configuration settings
 configuration:
-  organization_id:
-    type: String
   project_id:
     type: String
 
