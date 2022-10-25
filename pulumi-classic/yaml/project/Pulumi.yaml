@@ -1,29 +1,55 @@
+# Copyright 2022 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 name: ${PROJECT}
 description: ${DESCRIPTION}
 runtime: yaml
 
-# Configure example template
+# Configure example
 template:
-  description: Pulumi YAML example using the Google Cloud classic API that creates a new Google Cloud Project inside a Google Cloud Organisation.
+  description: Pulumi YAML example using the Google Cloud classic API that creates a new Google Cloud project inside a Google Cloud organization.
   config:
-    gcp:projectId:
-      description: The name of the Google Cloud Project to create in your Organisation.
-      default: my-new-project-id
-    orgId:
-      description: The Google Cloud Organisation ID to deploy to create the Google Cloud Project into.
+    organization_id:
+      type: String
+      description: The Google Cloud organization ID in which to create the Google Cloud project.
+    project_id:
+      type: String
+      description: A globally unique identifier for your project. 
+    name:
+      type: String
+      description: A human-readable name for your project. 
+    billing_account:
+      type: String
+      descrioption: Billing account id. 
+      
+# Example configuration settings
+configuration:
+  organization_id:
+    type: String
+  project_id:
+    type: String
+  name:
+    type: String 
+  billing_account:
+    type: String
 
-# Import the program's configuration settings.
-#configuration:
-#  orgId:
-#     type: String
-#     default: ${orgId}
-#  projectId:
-#    type: String
-
-# Define resources deployed in this example
+# Define resources
 resources:
-  example-project:
+  project:
     type: gcp:organizations:Project
     properties:
-      orgId: ${orgId}
-      projectId: ${gcp:projectId}
+      orgId: ${organization_id}
+      projectId: ${project_id}
+      billingAccount: ${billing_account}
+      name: ${name}
