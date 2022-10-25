@@ -12,6 +12,17 @@ node_modules
 # ============ Pulumi ============
 # ================================
 
+.idea/
+.DS_Store
+tests/vendor/
+state
+traces
+package-lock.json
+go.sum
+!tests/go.sum
+Pulumi.*.yaml
+node_modules
+
 *.swp
 **/vendor/
 **/node_modules/
