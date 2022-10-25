@@ -94,7 +94,6 @@ Wish to contribute an example yourself? Awesome, we welcome your contribution. P
 
 ---
 
-<br> 
 <table>
     <thead>
         <tr>
@@ -105,9 +104,9 @@ Wish to contribute an example yourself? Awesome, we welcome your contribution. P
     </thead>
     <tbody>
         <tr>
-            <td rowspan=1>Official Examples</td>
-            <td>The official Pulumi Examples repository.This repository contains examples that cover many Pulumi Providers across multiple Cloud Providers, Software Vendors and languages.</td>
-            <td rowspan=1><a href="https://github.com/pulumi/examples" target="_blank">Link</a></td>
+            <td>Official Examples</td>
+            <td>The official Pulumi Examples Repository.This GitHub repository contains examples that cover many Pulumi providers across multiple Cloud Providers, Software Vendors and languages.</td>
+            <td><a href="https://github.com/pulumi/examples" target="_blank">Link</a></td>
         </tr>
     </tbody>
 </table>
