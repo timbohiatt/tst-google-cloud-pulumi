@@ -1,9 +1,0 @@
-name: ${PROJECT}
-description: ${DESCRIPTION}
-runtime: yaml
-
-template:
-  description: Pulumi YAML example using the Google Cloud classic API that creates a [XXXXX]
-  config:
-    gcp:project:
-      description: The Google Cloud project to deploy this example into
