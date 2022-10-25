@@ -31,9 +31,9 @@ configuration:
 
 # Define resources
 resources:
-  google_api:
+  google-api:
     type: gcp:projects:Service
     properties:
       disableDependentServices: true
       project: ${project_id}
-      service: iam.googleapis.com
+      service: compute.googleapis.com
