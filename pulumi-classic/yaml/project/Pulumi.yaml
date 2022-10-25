@@ -4,7 +4,7 @@ runtime: yaml
 
 # Configure example template
 template:
-  description: Pulumi YAML example using the Google Cloud classic API that creates a [XXXXX]
+  description: Pulumi YAML example using the Google Cloud classic API that creates a new Google Cloud Project inside a Google Cloud Organisation.
   config:
     gcp:orgId:
       description: The Google Cloud Organisation ID to deploy to create the Google Cloud Project into.
@@ -13,11 +13,11 @@ template:
       default: my-new-project-id
 
 # Import the program's configuration settings.
-configuration:
-  orgId:
-    type: String
-  projectId:
-    type: String
+#configuration:
+#  orgId:
+#    type: String
+#  projectId:
+#    type: String
 
 # Define resources deployed in this example
 resources:
