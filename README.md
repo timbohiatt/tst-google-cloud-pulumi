@@ -72,7 +72,7 @@ Here is our current list of available Pulumi Google Cloud examples.
 
 <br>
 
-### Requesting Examples
+## Requesting Examples
 
 ---
 
@@ -82,7 +82,7 @@ Is this repository missing a much needed example? It's highly possible! The gene
 
 <br>
 
-### Contributing Examples
+## Contributing Examples
 
 ---
 
@@ -90,7 +90,7 @@ Wish to contribute an example yourself? Awesome, we welcome your contribution. P
 
 <br>
 
-### Additional Resources
+## Additional Resources
 
 ---
 
