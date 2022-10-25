@@ -5,10 +5,14 @@ This repository contains a collection of code examples that demonstrate the depl
 This repository contains examples for both the [Google Native](https://www.pulumi.com/registry/packages/google-native/) & [Google Cloud (GCP) Classic](https://www.pulumi.com/registry/packages/gcp/) providers developed by Pulumi.
 
 Google Cloud Pulumi examples are provided across several languages.
+<br>
+<br>
 
 ## Pulumi Examples
 
-</br>
+---
+
+<br> 
 <table>
     <thead>
         <tr>
